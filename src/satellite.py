@@ -49,7 +49,7 @@ class Satellite(pg.sprite.Sprite):
         self.distance = 0
 
         # set starting sound attributes
-        # self.thrust = pg.mixer.Sound('thrust_audio.ogg')  # TODO: <--- MAKE THIS
-        # self.thrust.set_volume(0.07)  # valid values are 0-1
+        self.thrust = pg.mixer.Sound(r'src\assets\sounds\thrust_audio.ogg')
+        self.thrust.set_volume(0.07)  # valid values are 0-1
 
         # endregion
