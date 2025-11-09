@@ -73,7 +73,6 @@ def main():
         screen.fill(colors['BLACK'])  # fill with black
         screen.blit(background, (0, 0))  # draw the background (which has the satellite path on it)
         sat_sprite.draw(screen)  # draw the satellite sprite
-        sat_sprite
 
         pg.display.flip()
         clock.tick(60)  # cat at 60 FPS
