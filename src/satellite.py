@@ -26,9 +26,6 @@ class Satellite(pg.sprite.Sprite):
         self.image_sat = pg.image.load(r"src\assets\sprites\satellite.png").convert()
         self.image_crash = pg.image.load(r"src\assets\sprites\satellite_crashed.png").convert()
         self.image = self.image_sat  # create ref
-
-        # create the rectangle attribute of the Satellite sprite, use the black parts to remove the background
-        self.rect = self.image.get_rect()
         self.image.set_colorkey(colors['BLACK'])
 
         # region === SETTING INITIAL POSITION, SPEED, FUEL, & SOUND ATTRIBUTES ===
@@ -36,6 +33,10 @@ class Satellite(pg.sprite.Sprite):
         # set starting coords using random ranges
         self.x = random.randrange(315, 425)
         self.y = random.randrange(70, 180)
+
+        # create the rectangle attribute of the Satellite sprite, use the black parts to remove the background
+        self.rect = self.image.get_rect()
+        self.rect.center = (self.x, self.y)  # sets the starting position of the sprite
 
         # set starting velocity
         self.dx = random.choice([-3, 3])  # negative values result in counterclockwise orbit
@@ -48,7 +49,7 @@ class Satellite(pg.sprite.Sprite):
         self.distance = 0
 
         # set starting sound attributes
-        self.thrust = pg.mixer.Sound('thrust_audio.ogg')  # TODO: <--- MAKE THIS
+        self.thrust = pg.mixer.Sound(r'src\assets\sounds\thrust_audio.ogg')
         self.thrust.set_volume(0.07)  # valid values are 0-1
 
         # endregion
