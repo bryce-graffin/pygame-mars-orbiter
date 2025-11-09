@@ -8,8 +8,11 @@ import os  # for updating where the window will be located if the user decides t
 import pygame as pg  # for running the game
 
 # region === IMPORT MODULES FROM SRC ===
+
 from src.utils.color_table import colors
 from src.satellite import Satellite
+
+# endregion
 
 
 def main():
