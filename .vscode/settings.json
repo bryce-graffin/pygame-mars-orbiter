@@ -1,9 +1,0 @@
-{
-    "files.autoSave": "afterDelay",
-    "editor.wordWrap": "bounded",
-    "editor.wordWrapColumn": 120,
-    "pylint.args": [
-        "--max-line-length=120",
-        "--disable=E1101"
-    ]
-}
