@@ -14,7 +14,7 @@ from src.satellite import Satellite
 
 # endregion
 
-
+# TODO: add a Scene object to contain this main game loop and related methods
 def main():
     """
     Set up labels and instructions, create objects, & run the game loop.

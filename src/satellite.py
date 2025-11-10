@@ -4,13 +4,17 @@ This module contains the `Satellite` class and methods.
 Author: Bryce Graffin
 Date: 08 November 2025
 """
+# region === IMPORTS ===
+# generic imports
 import random  # for handling starting locations of the satellite sprite
 import math  # for calculating distance and heading
 import pygame as pg  # for running the game
 
-# import utils
+# module imports
 from src.utils.color_table import colors
 from src.planet import Planet
+
+# endregion
 
 class Satellite(pg.sprite.Sprite):
     """
@@ -19,7 +23,7 @@ class Satellite(pg.sprite.Sprite):
 
     def __init__(self, background):
         super().__init__()
-        
+
         self.background = background  # this is passed in and will be used to draw the satellite's path
 
         # load and convert both satellite state images (alive/crashed) and convert them to usable format upon init
@@ -116,6 +120,8 @@ class Satellite(pg.sprite.Sprite):
     def rotate(self):
         """
         Rotates `Satellite` (using degrees for `pygame`) so the radar dish faces the planet's center.
+
+        Note: similar to `Planet.rotate()`
 
         ### Potential Future Improvement:
         - Consider factoring in a system (in harder game-modes) where the player needs to purchase real-world elements
