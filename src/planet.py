@@ -26,8 +26,10 @@ class Planet(pg.sprite.Sprite):
         super().__init__()
 
         # load and convert the planet image and convert it to usable format upon init
-        self.image_mars_pixel = pg.image.load(r'src\assets\sprites\mars_north_pole_3d_pixelated.png').convert()
-        self.image_mars_real = pg.image.load(r'src\assets\sprites\mars_north_pole_3d_realistic.png').convert()
+        # self.image_mars_pixel = pg.image.load(r'src\assets\sprites\mars_north_pole_3d_pixelated.png').convert()
+        # self.image_mars_real = pg.image.load(r'src\assets\sprites\mars_north_pole_3d_realistic.png').convert()
+        self.image_mars_pixel = pg.image.load(r'src\assets\sprites\mars.png').convert()
+        self.image_mars_real = pg.image.load(r'src\assets\sprites\mars_water.png').convert()
         self.image_copy = pg.transform.scale(self.image_mars_pixel, (100, 100))  # scale down for game window
         self.image_copy.set_colorkey(colors['BLACK'])
         self.rect = self.image_copy.get_rect()

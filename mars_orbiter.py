@@ -144,6 +144,7 @@ def main():
 
         # update game objects
         sat_sprite.update()
+        planet_sprite.update()
 
         # draw
         screen.fill(colors['BLACK'])  # fill with black
